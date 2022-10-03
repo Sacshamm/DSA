@@ -32,6 +32,8 @@ public:
     //   }
     
       ////O(n)
+    
+    //first = istreebalanced second=height
       pair<bool,int>solve(TreeNode* node){
           if(node==nullptr){
           pair <bool,int> p=make_pair(true,0);
