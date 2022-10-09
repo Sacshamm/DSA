@@ -6,8 +6,10 @@ class Solution
     vector<int> topView(Node *root)
     {
         vector<int>ans;
-        map<int,int>mp;
-        queue<pair<Node*,int>>q;
+        
+        map<int,int>mp;//vline , node data ka pair
+        queue<pair<Node*,int>>q;//node , vline ka pair
+        
         q.push({root,0});
         
         while(!q.empty()){
@@ -17,7 +19,7 @@ class Solution
             Node*node = it.first;
             int v_line = it.second;
             
-            if(mp.find(v_line)==mp.end()) 
+            if(mp.find(v_line)==mp.end()) // if ele is not present then only push to map
                mp[v_line]=node->data;
                
              if(node->left)
